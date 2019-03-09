@@ -11,5 +11,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
 add_definitions(-g)
 
 include(FindLibraries)
+include_directories(${WEBRTC_INCLUDE_DIR}
+    ${WEBRTC_INCLUDE_DIR}/webrtc
+    ${WEBRTC_INCLUDE_DIR}/webrtc/third_party/abseil-cpp
+)
 
 add_subdirectory(server)
