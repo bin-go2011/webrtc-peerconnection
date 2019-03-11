@@ -7,4 +7,4 @@ target_sources(server
         utils.cc
 )
 target_include_directories(server PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(server  ${WEBRTC_LIBRARIES_RELEASE} dl)
+target_link_libraries(server  ${LIBWEBRTC_LIBRARIES})

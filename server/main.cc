@@ -64,25 +64,24 @@ void HandleBrowserRequest(DataSocket* ds, bool* quit) {
 int main(int argc, char* argv[]) {
   std::string program_name = argv[0];
   std::string usage = "Example usage: " + program_name + " --port=8888";
-  // webrtc::test::CommandLineParser parser;
-  // parser.Init(argc, argv);
-  // parser.SetUsageMessage(usage);
-  // parser.SetFlag("port", "8888");
-  // parser.SetFlag("help", "false");
-  // parser.ProcessFlags();
+   webrtc::test::CommandLineParser parser;
+   parser.Init(argc, argv);
+   parser.SetUsageMessage(usage);
+   parser.SetFlag("port", "8888");
+   parser.SetFlag("help", "false");
+   parser.ProcessFlags();
 
-  // if (parser.GetFlag("help") == "true") {
-  //   parser.PrintUsageMessage();
-  //   return 0;
-  // }
+   if (parser.GetFlag("help") == "true") {
+     parser.PrintUsageMessage();
+     return 0;
+   }
 
-  // webrtc::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
+  webrtc::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
   // InitFieldTrialsFromString stores the char*, so the char array must outlive
   // the application.
-  // webrtc::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
+  webrtc::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
 
-  // int port = strtol((parser.GetFlag("port")).c_str(), NULL, 10);
-  int port = 18088;
+  int port = strtol((parser.GetFlag("port")).c_str(), NULL, 10);
 
   // Abort if the user specifies a port that is outside the allowed
   // range [1, 65535].

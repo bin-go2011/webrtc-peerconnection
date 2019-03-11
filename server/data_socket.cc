@@ -19,7 +19,7 @@
 #include <unistd.h>
 #endif
 
-#include "examples/peerconnection/server/utils.h"
+#include "utils.h"
 
 static const char kHeaderTerminator[] = "\r\n\r\n";
 static const int kHeaderTerminatorLength = sizeof(kHeaderTerminator) - 1;
