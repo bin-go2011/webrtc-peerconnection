@@ -8,12 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
     ${CMAKE_SOURCE_DIR}/CMakeModules)
 
-add_definitions(-g)
+add_definitions(-g -DWEBRTC_MAC -DWEBRTC_POSIX -fno-rtti)
 
 include(FindLibraries)
 include_directories(${WEBRTC_INCLUDE_DIR}
     ${WEBRTC_INCLUDE_DIR}/webrtc
     ${WEBRTC_INCLUDE_DIR}/webrtc/third_party/abseil-cpp
+    ${WEBRTC_INCLUDE_DIR}/webrtc/third_party/libyuv/include
+    ${WEBRTC_INCLUDE_DIR}/webrtc/third_party/jsoncpp/source/include
 )
 
 add_subdirectory(server)
+add_subdirectory(client)
