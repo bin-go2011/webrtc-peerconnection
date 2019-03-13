@@ -18,5 +18,7 @@ include_directories(${WEBRTC_INCLUDE_DIR}
     ${WEBRTC_INCLUDE_DIR}/webrtc/third_party/jsoncpp/source/include
 )
 
+link_directories(/usr/local/opt/gettext/lib)
+
 add_subdirectory(server)
 add_subdirectory(client)
