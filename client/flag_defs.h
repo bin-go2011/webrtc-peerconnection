@@ -24,7 +24,7 @@ WEBRTC_DEFINE_bool(autoconnect,
                    false,
                    "Connect to the server without user "
                    "intervention.");
-WEBRTC_DEFINE_string(server, "localhost", "The server to connect to.");
+WEBRTC_DEFINE_string(server, "127.0.0.1", "The server to connect to.");
 WEBRTC_DEFINE_int(port,
                   kDefaultServerPort,
                   "The port on which the server is listening.");
